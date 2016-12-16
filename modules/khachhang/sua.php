@@ -2,17 +2,17 @@
 	$servername = "localhost";
 	$username = "root";
 	$password = "";
-	$csdl = "mydb";
+	$csdl = "mydata";
 	$connection = mysqli_connect($servername, $username, $password, $csdl);
 
-	$sql="select * from customer where customer_id = 'KH01'"; 
+	$sql="select * from customer where customer_id = '$_GET[id]'"; 
 	$khachhang = mysqli_query($connection, $sql);
 	$dong = mysqli_fetch_array($khachhang);
 ?>
 <form action="modules/khachhang/xuly.php" method="post" enctype="multipart/form-data">
 <table width="auto" height="100px" border="1">
   <tr>
-    <td colspan="5" align="center" height="50px">Sửa khách hàng</td>
+    <td colspan="5" align="center" height="50px">Chi tiết khách hàng</td>
   </tr>
   <tr>
     <td width="130" height="40px">Mã khách hàng</td>
@@ -36,7 +36,9 @@
   </tr>
   <tr width="auto" height="40px" align="center">
     <td colspan="2">
-    <input type="submit" name="sua" value="Sửa">    </td>
+		<input type="submit" name="Update" value="Update"> 
+			
+	</td>
   </tr>
 </table>
 </form>

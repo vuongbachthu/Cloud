@@ -11,7 +11,7 @@
   <tr>
     <td width="130" height="40px">Tên loại sản phẩm</td>
     <td>
-      <input type="text" name="type_name" id="type_name" /></td>
+      <input type="text" name="product_type" id="product_type" /></td>
   </tr>
   <tr width="auto" height="40px" align="center">
     <td colspan="2"><input type="submit" name="them" value="Thêm Loại Sản Phẩm"></td>

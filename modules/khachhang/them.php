@@ -3,11 +3,7 @@
   <tr>
     <td colspan="5" align="center" height="50px">Thêm khách hàng</td>
   </tr>
-  <tr>
-    <td width="130" height="40px">Mã khách hàng</td>
-    <td>
-    <input type="text" name="customer_id" id="customer_id"></td>
-  </tr>
+ 
   <tr>
     <td width="130" height="40px">Tên khách hàng</td>
     <td>

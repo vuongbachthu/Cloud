@@ -15,6 +15,7 @@
 </div>
 <div class="content_right">
 	<?php
+		include('modules/hoadon/search.php');
 		include('modules/hoadon/lietke.php');
 	?>
 </div>

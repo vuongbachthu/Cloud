@@ -38,19 +38,19 @@
   </tr>
   <tr>
     <td width="130" height="40px">Loại sản phẩm</td>
-    <td><input type="text" name="type_name" id="type_name"></td>
+    <td><input type="text" name="product_type" id="product_type"></td>
   </tr>
   <tr>
     <td width="130" height="40px">Số lượng</td>
-    <td><input type="text" name="number" id="number" /></td>
+    <td><input type="text" name="product_number" id="product_number" /></td>
   </tr>
   <tr>
     <td width="130" height="40px">Giá sản phẩm</td>
-    <td><input type="text" name="price" id="price" /></td>
+    <td><input type="text" name="product_price" id="product_price" /></td>
   </tr>
   <tr>
     <td width="130" height="40px">Đơn giá</td>
-    <td><input type="text" name="sum_price" id="sum_price"></td>
+    <td><input type="text" name="bill_price" id="bill_price"></td>
   </tr>
   <tr width="auto" height="40px" align="center">
     <td colspan="2"><input type="submit" name="them" value="Tạo hóa đơn"></td>

@@ -2,46 +2,40 @@
 	$servername = "localhost";
 	$username = "root";
 	$password = "";
-	$csdl = "mydb";
+	$csdl = "mydata";
 	$connection = mysqli_connect($servername, $username, $password, $csdl);
 
-	$sql = "SELECT * FROM product";
+	$sql = "SELECT * FROM products";
 	
 	$product = mysqli_query($connection, $sql);
 ?>
-<table width="auto" height="200px" border="1">
+<table width="auto" height="auto" border="1">
   <tr>
-    <td colspan="8"><div align="center">Danh sách sản phẩm</div></td>
+    <td height="50" colspan="8"><div align="center">Danh sách sản phẩm</div></td>
   </tr>
-	<td width="50" align="center">STT</td>
-    <td width="100" align="center">Mã sản phẩm</td>
-    <td width="100" align="center">Tên sản phẩm</td>
-    <td width="80" align="center">Giá </td>
-    <td width="80" align="center">Số lượng</td>
-    <td width="80" align="center">Tên loại</td>
-    <td colspan="2" align="center">Quản lý</td>
+    <td width="100" height="40" align="center">Mã sản phẩm</td>
+    <td width="100" height="40" align="center">Tên sản phẩm</td>
+    <td width="80" height="40" align="center">Giá </td>
+    <td width="80" height="40" align="center">Tên loại</td>
+	<td width="80" height="40" align="center">Mã loại</td>
+    <td colspan="2" height="40" align="center">Quản lý</td>
   </tr>
     <?php
-		$stt=0;
+		
 		while($dong = mysqli_fetch_array($product)){
 	?>
   <tr>
 
-    <td align="center"><?php echo $stt; ?></td>
-    <td align="center"><?php echo $dong['product_id'] ?> </td>
-    <td align="center"><?php echo $dong['product_name'] ?></td>
-    <td align="center"><?php echo $dong['product_price'] ?></td>
-    <td align="center"><?php echo $dong['product_number'] ?></td>
-    <td align="center"><?php echo $dong['type_type_id'] ?></td>
-    <td width="50" align="center"><a href="index.php?quanly=sanpham&ac=sua&id=<?php echo $dong['product_id'] ?>">Sửa</a></td>
-    <td width="50" align="center">
-		<form action="modules/sanpham/xuly.php?id=<?php echo $row['product_id'] ?>" method="post" enctype="multipart/form-data">
-			<input type="submit" name="xoa" value="Xoa">
-		</form>
-	</td>
+    <td width="100" height="40" align="center"><?php echo $dong['product_id'] ?> </td>
+    <td width="100" height="40" align="center"><?php echo $dong['product_name'] ?></td>
+    <td width="80" height="40" align="center"><?php echo $dong['product_price'] ?></td>
+    <td width="80" height="40" align="center"><?php echo $dong['product_type'] ?></td>
+    <td width="80" height="40" align="center"><?php echo $dong['type_id'] ?></td>
+    <td width="80" height="40" align="center"><a href="index.php?quanly=sanpham&ac=sua&id=<?php echo $dong['product_id'] ?>">Chi tiết</a></td>
+    
   </tr>
   <?php
-  $stt++;
+  
 	}
   ?>
 </table>

@@ -15,6 +15,7 @@
 </div>
 <div class="content_right">
 	<?php
+		include('modules/khachhang/search.php');
 		include('modules/khachhang/lietke.php');
 	?>
 </div>

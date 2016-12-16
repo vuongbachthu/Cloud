@@ -21,13 +21,13 @@
       <input type="text" name="product_price" id="product_price" /></td>
   </tr>
   <tr>
-    <td width="130" height="40px">Số lượng</td>
+    <td width="130" height="40px">Tên loại</td>
     <td>
-      <input type="text" name="product_number" id="product_number" /></td>
+      <input type="text" name="product_type" id="product_type" /></td>
   </tr>
   <tr>
-    <td width="130" height="40px">Loại sản phẩm</td>
-    <td ><input type="text" name="product_type" id="product_type" /></td>
+    <td width="130" height="40px">Mã loại</td>
+    <td ><input type="text" name="type_id" id="type_id" /></td>
   </tr>
 
   <tr width="auto" height="40px" align="center">

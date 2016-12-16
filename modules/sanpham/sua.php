@@ -2,22 +2,18 @@
 	$servername = "localhost";
 	$username = "root";
 	$password = "";
-	$csdl = "mydb";
+	$csdl = "mydata";
 	$connection = mysqli_connect($servername, $username, $password, $csdl);
-	$id = $_GET['id'];
 	
-	$sql = "select * from product where product_id = 'SP01'";
+	$sql = "select * from products where product_id = '$_GET[id]'";
 	$sanpham = mysqli_query($connection, $sql);
 	$row = mysqli_fetch_array($sanpham);
 	
 ?>
-<script src="http://js.nicedit.com/nicEdit-latest.js" type="text/javascript"></script>
-<script type="text/javascript">bkLib.onDomLoaded(nicEditors.allTextAreas);</script>
-
 <form action="modules/sanpham/xuly.php?id=<?php echo $row['product_id'] ?>" method="post" enctype="multipart/form-data">
 <table width="auto" height="100px" border="1">
   <tr>
-    <td colspan="5" align="center" height="50px">Sửa sản phẩm</td>
+    <td colspan="5" align="center" height="50px">Chi tiết sản phẩm</td>
   </tr>
   <tr>
     <td width="130" height="40px">Mã sản phẩm</td>
@@ -35,13 +31,13 @@
       <input type="text" name="product_price" id="product_price" value="<?php echo $row['product_price'] ?>"/></td>
   </tr>
   <tr>
-    <td width="130" height="40px">Số lượng</td>
+    <td width="130" height="40px">Tên loại</td>
     <td>
-      <input type="text" name="product_number" id="product_number" value="<?php echo $row['product_number'] ?>"/></td>
+      <input type="text" name="product_type" id="product_type" value="<?php echo $row['product_type'] ?>"/></td>
   </tr>
   <tr>
-    <td width="130" height="40px">Loại sản phẩm</td>
-    <td ><input type="text" name="product_type" id="product_type" value="<?php echo $row['type_type_id'] ?>"/></td>
+    <td width="130" height="40px">Mã loại</td>
+    <td ><input type="text" name="type_id" id="type_id" value="<?php echo $row['type_id'] ?>"/></td>
   </tr>
 
   <tr width="auto" height="40px" align="center">
